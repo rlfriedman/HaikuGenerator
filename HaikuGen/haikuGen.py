@@ -15,7 +15,7 @@ def genLine(syllables, dictList):
         numWords = random.randint(1, 2)
     syllLst = constrained_sum_sample_pos(numWords, syllables)
 
-    for syllable in syllLst: # 1 and 3 chance for the syllable to be built from each of the dictionaries
+    for syllable in syllLst: # 1 in 3 chance for the syllable to be built from each of the dictionaries
         chance = random.randint(1, 3)
         if syllable > 1 and chance == 2:
             bgram = random.choice(dictList[1][syllable])
